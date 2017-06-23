@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+/*@mixin screenSize(){
+	@media screen and (max-width: $break-md) {
+		width:33.3333%;
+	}
+}*/
+body {
+  font-family: "JosefinSans", sans-serif;
+  background-color: white; }
+
+h1, h2 {
+  color: black;
+  text-align: left; }
+
+a {
+  text-decoration: none;
+  border-radius: 3px;
+  width: 80%;
+  height: inherit;
+  color: white;
+  text-align: center;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%; }
+
+label {
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  height: inherit;
+  color: white;
+  text-align: center;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%; }
+
+/* Ghost Labels */
+#Labels-ghost label[type*="PRIMARY-ghost"] {
+  border: solid 1px;
+  border-color: #ED6A5A;
+  background-color: transparent;
+  color: #ED6A5A; }
+
+/* Colours by type */
+[type~="PRIMARY"] {
+  background-color: #ED6A5A; }
+
+/* Button states & colours */
+a[type~="PRIMARY"]:hover {
+  background-color: #e8402c; }
+
+a[type~="PRIMARY"]:focus {
+  background-color: #cb2a16; }
+
+a[type~="PRIMARY"]:active {
+  background-color: #cb2a16; }
+
+/* Ghost Labels */
+#Labels-ghost label[type*="SECONDARY-ghost"] {
+  border: solid 1px;
+  border-color: #264653;
+  background-color: transparent;
+  color: #264653; }
+
+/* Colours by type */
+[type~="SECONDARY"] {
+  background-color: #264653; }
+
+/* Button states & colours */
+a[type~="SECONDARY"]:hover {
+  background-color: #162830; }
+
+a[type~="SECONDARY"]:focus {
+  background-color: #060b0d; }
+
+a[type~="SECONDARY"]:active {
+  background-color: #060b0d; }
+
+/* Ghost Labels */
+#Labels-ghost label[type*="TERTIARY-ghost"] {
+  border: solid 1px;
+  border-color: #9BC1BC;
+  background-color: transparent;
+  color: #9BC1BC; }
+
+/* Colours by type */
+[type~="TERTIARY"] {
+  background-color: #9BC1BC; }
+
+/* Button states & colours */
+a[type~="TERTIARY"]:hover {
+  background-color: #7cada7; }
+
+a[type~="TERTIARY"]:focus {
+  background-color: #5e9890; }
+
+a[type~="TERTIARY"]:active {
+  background-color: #5e9890; }
+
+/* Ghost Labels */
+#Labels-ghost label[type*="INFO-ghost"] {
+  border: solid 1px;
+  border-color: #5CA4A9;
+  background-color: transparent;
+  color: #5CA4A9; }
+
+/* Colours by type */
+[type~="INFO"] {
+  background-color: #5CA4A9; }
+
+/* Button states & colours */
+a[type~="INFO"]:hover {
+  background-color: #498589; }
+
+a[type~="INFO"]:focus {
+  background-color: #376568; }
+
+a[type~="INFO"]:active {
+  background-color: #376568; }
+
+/* Ghost Labels */
+#Labels-ghost label[type*="SUCCESS-ghost"] {
+  border: solid 1px;
+  border-color: #2A9D8F;
+  background-color: transparent;
+  color: #2A9D8F; }
+
+/* Colours by type */
+[type~="SUCCESS"] {
+  background-color: #2A9D8F; }
+
+/* Button states & colours */
+a[type~="SUCCESS"]:hover {
+  background-color: #1f756a; }
+
+a[type~="SUCCESS"]:focus {
+  background-color: #144d46; }
+
+a[type~="SUCCESS"]:active {
+  background-color: #144d46; }
+
+/* Ghost Labels */
+#Labels-ghost label[type*="ERROR-ghost"] {
+  border: solid 1px;
+  border-color: #F4A261;
+  background-color: transparent;
+  color: #F4A261; }
+
+/* Colours by type */
+[type~="ERROR"] {
+  background-color: #F4A261; }
+
+/* Button states & colours */
+a[type~="ERROR"]:hover {
+  background-color: #f18631; }
+
+a[type~="ERROR"]:focus {
+  background-color: #df6b10; }
+
+a[type~="ERROR"]:active {
+  background-color: #df6b10; }
+
+/* Containers */
+.container {
+  margin: 30px 10%;
+  clear: both;
+  width: 80%;
+  height: inherit;
+  color: white;
+  text-align: center;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%; }
+
+.mini-container {
+  width: 16.66667%;
+  float: left;
+  margin-bottom: 10px; }
+  @media screen and (max-width: 992px) {
+    .mini-container {
+      width: 33.3333%; } }
+  @media (min-width: 450px) and (max-width: 600px) {
+    .mini-container {
+      width: 50%; } }
+  @media (min-width: 320px) and (max-width: 450px) {
+    .mini-container {
+      width: 100%; } }
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  border-radius: 3px;
+  color: white;
+  margin-bottom: 15px; }
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black; }

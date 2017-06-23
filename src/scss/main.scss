@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+$font:'JosefinSans', sans-serif;
+$color:#ED6A5A #264653 #9BC1BC #5CA4A9 #2A9D8F #F4A261;
+$id-type:PRIMARY SECONDARY TERTIARY INFO SUCCESS ERROR;
+$break-xs: "(min-width: 320px) and (max-width: 450px)";
+$break-sm: "(min-width: 450px) and (max-width: 600px)";//580px;
+$break-md: 992px;
+@mixin css-bundle(){
+	width:80%;
+	height:inherit;
+	color:white;
+	text-align:center;
+	display:block;
+	float:left;
+	margin-left:5%;
+	margin-right:5%;
+	padding: 5%;
+}
+
+@mixin screenSize(){
+	@media screen and (max-width: $break-md) {
+		width:33.3333%;
+	}
+	@media #{$break-sm} {
+		width:50%;
+	}
+	@media #{$break-xs} {
+		width:100%;
+	}
+}
+
+/*@mixin screenSize(){
+	@media screen and (max-width: $break-md) {
+		width:33.3333%;
+	}
+}*/
+
+
+$index:1;
+
+body {
+  font-family: $font;
+  background-color: white;
+}
+h1, h2{color:black;text-align:left;}
+
+a{	
+	text-decoration:none; 
+	border-radius: 3px;
+	@include css-bundle();
+}
+label{
+	border-radius: 10px;
+	padding: 10px;
+	@include css-bundle();
+}
+
+@each $i in $color{
+	/* Ghost Labels */
+	#Labels-ghost label[type*="#{nth($id-type,$index)}-ghost"]{
+		border: solid 1px;
+		border-color: nth($color,$index);
+		background-color:transparent;
+		color:nth($color,$index);
+	}
+	/* Colours by type */
+	[type~="#{nth($id-type,$index)}"]{background-color:nth($color,$index);}
+	//@debug nth($color,$index);
+	
+	/* Button states & colours */
+	$dark: darken($i,10%);
+	$darker: darken($i,20%);
+	
+	a[type~="#{nth($id-type,$index)}"]:hover{
+		background-color: $dark;
+	}
+	a[type~="#{nth($id-type,$index)}"]:focus{
+		background-color: $darker;
+	}
+	a[type~="#{nth($id-type,$index)}"]:active{
+		background-color: $darker;
+	}
+	$index:$index+1;
+}
+/* Containers */
+.container{
+	margin: 30px 10%;
+	clear:both;
+	@include css-bundle();
+}
+.mini-container{
+	width: percentage(1/6);
+	float:left;
+	margin-bottom:10px;
+	@include screenSize();
+}
+
+ /* The alert message box */
+.alert {
+    padding: 20px;
+	border-radius: 3px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+} 
